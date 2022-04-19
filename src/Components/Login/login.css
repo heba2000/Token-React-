@@ -1,0 +1,25 @@
+.form-label {
+    color: #767f89;
+    font-weight: 500;
+}
+.form-control {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.form-control:focus{
+    background-color: transparent;
+}
+.loginPage{
+    height: 100vh;
+    background-image: url(../../Assets/Group\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-row{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
