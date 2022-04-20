@@ -1,0 +1,20 @@
+.actions-page{
+    height: 100vh;
+    background-image: url(../../Assets/Group\ 2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.actions-page h5{
+    font-weight: 300;
+}
+.actions-container{
+    background-color: #282828;
+    box-shadow: 0px 0px 10px 12px #1e1e1e;
+    color: #fff;
+    border-radius: 10px;
+    margin: auto;
+}
+.action-btn{
+    /* color: #26ae60; */
+}

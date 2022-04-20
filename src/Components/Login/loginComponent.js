@@ -1,30 +1,30 @@
-// import {useFormik} from 'formik'
 
 import './login.css'
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import logo from '../../Assets/icons8-security-shield.png'
 function Login (){
     return(
         <section className='loginPage'>
         <div className='container h-100'>
             <div className='row form-row'>
-                <div className='col-md-5'> 
+                <div className='col-md-5 form-div'> 
                     <form>
-                        <div className="mb-3">
-                            <label for="exampleInputEmail1" className="form-label">Email address</label>
-                            <input type="email" className="form-control"/>
+                        <div className="my-3 ">
+                            <FontAwesomeIcon icon="search" className='text-white mx-2' />   
+                            <FontAwesomeIcon icon="user" className='text-white'/>     
+                            <input type="number" className="form-control" placeholder="Pin"/>
                         </div>
-                        <div className="mb-3">
-                            <label for="exampleInputPassword1" className="form-label">Password</label>
-                            <input type="password" className="form-control"  />
+                        <div className="my-3">
+                            <input type="text" className="form-control "  placeholder="Name"/>
                         </div>
-                        <button type="submit" className="btn btn-primary my-2 px-4">Sign In</button>
+                        <button type="submit" className="btn my-2 w-100 ">Login</button>
                     </form>
                 </div>
-                <div className='col-md-7'>
+                <div className='col-md-7 text-center'>
                     <div className="gaurd-icon">
-                        
+                        <img src={logo} alt="security sheild"/>  
                     </div>
+                    <h3 className='text py-3'>Hardware Token </h3>
                 </div>
             </div>
         </div>
