@@ -10,12 +10,12 @@ function Login (){
                 <div className='col-md-5 form-div'> 
                     <form>
                         <div className="my-3 ">
-                            <FontAwesomeIcon icon="search" className='text-white mx-2' />   
-                            <FontAwesomeIcon icon="user" className='text-white'/>     
-                            <input type="number" className="form-control" placeholder="Pin"/>
+                            <FontAwesomeIcon icon="lock" className='icon icon-lock' />   
+                            <input type="number" className="form-control pin-input" placeholder="Pin"/>
                         </div>
                         <div className="my-3">
-                            <input type="text" className="form-control "  placeholder="Name"/>
+                            <FontAwesomeIcon icon="user" className='icon icon-name'/>   
+                            <input type="text" className="form-control name-input"  placeholder="Name"/>
                         </div>
                         <button type="submit" className="btn my-2 w-100 ">Login</button>
                     </form>

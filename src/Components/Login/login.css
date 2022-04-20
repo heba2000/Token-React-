@@ -5,7 +5,7 @@
 .form-control {
     background-color: rgba(255, 255, 255, 0.7);
     border-color: rgba(255, 255, 255, 0.7);
-    padding: 12px 20px !important;
+    padding: 12px 35px !important;
 }
 .form-control:focus{
     box-shadow: 0px 0px 5px 1px #26ae61f6;
@@ -55,4 +55,14 @@
  .text { 
     color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
+ }
+ .pin-input , .name-input{
+    position: relative;
+ }
+ .icon-lock , .icon-name {
+  position: absolute;  
+  z-index: 999999999;
+  color: #585858;
+  top: 14%;
+  left: 5%; 
  }
