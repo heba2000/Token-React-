@@ -1,10 +1,4 @@
-.actions-page{
-    height: 100vh;
-    background-image: url(../../Assets/Group\ 2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .actions-page h5{
     font-weight: 300;
 }
@@ -14,7 +8,4 @@
     color: #fff;
     border-radius: 10px;
     margin: auto;
-}
-.action-btn{
-    /* color: #26ae60; */
 }

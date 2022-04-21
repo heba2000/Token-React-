@@ -1,8 +1,11 @@
 import './actions.css'
+import tier from '../../Assets/tier.png'
+// import logo from '../../Assets/icons8-security-shield.png'
 
 function Actions() {
     return(
-        <section className='actions-page'>
+        <section className='bg actions-page'>
+                <img src={tier} alt="tier rotation" className="tier"/>     
             <div className='container h-100'>
                 <div className='row h-100'>
                     <div className='col-9 m-auto'> 
@@ -22,6 +25,7 @@ function Actions() {
                         </div> */}
                        </div> 
                     </div>
+                   
                 </div>
             </div>
         </section>
