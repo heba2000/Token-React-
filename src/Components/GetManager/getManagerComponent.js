@@ -29,7 +29,7 @@ function GetManager (){
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
                     </div>
-                </div>
+                </div>    
             </div> 
         </div>
         </section>
