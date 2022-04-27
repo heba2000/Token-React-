@@ -3,8 +3,25 @@ import './login.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../Assets/icons8-security-shield.png'
 import tier from '../../Assets/tier.png'
+import { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Login (){
+    const [incorrectPass , setIncorrectPass] = useState(null)
+    const navigate = useNavigate()
+
+    const handleSubmit = (e)=>{
+        e.preventDefault() 
+        axios.post('http://localhost:5000/api/token/login' , {
+            pin : '123456789'
+        }).then(resp =>{
+            if(resp.data.correct) navigate('/actions')
+            else setIncorrectPass('Incorrect Pin')
+        }).catch(err =>{
+            setIncorrectPass('something went wrong !!')
+        })
+    }
     return(
         <section className='bg loginPage'>
         <img src={tier} alt="tier rotation" className="tier"/>     
@@ -15,13 +32,18 @@ function Login (){
                             <h4> Enter Pin and Name to Login </h4>
                         <div className="my-3 pin-input">
                             <FontAwesomeIcon icon="lock" className='icon icon-lock' />   
-                            <input type="number" className="form-control " placeholder="Pin"/>
+                            <input  className="form-control " placeholder="Pin"/>
                         </div>
-                        <div className="my-3 name-input">
-                            <FontAwesomeIcon icon="user" className='icon icon-name'/>   
-                            <input type="text" className="form-control "  placeholder="Name"/>
-                        </div>
-                        <button type="submit" className="btn my-2 w-100 ">Login</button>
+                        {
+                            (
+                                incorrectPass &&  <p style={{
+                                    color : 'red' , 
+                                    textAlign : 'center'
+                                }}></p>
+                            )
+                            
+                        }
+                        <button onClick={handleSubmit} type="submit" className="btn my-2 w-100 ">Login</button>
                     </form>
                 </div>
                 <div className='col-md-7 text-center'>

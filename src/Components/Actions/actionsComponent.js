@@ -1,8 +1,11 @@
 import './actions.css'
 import tier from '../../Assets/tier.png'
+import { useNavigate } from 'react-router-dom'
 // import logo from '../../Assets/icons8-security-shield.png'
 
 function Actions() {
+    const navigate = useNavigate()
+    const handleRouting = to => navigate(to)
     return(
         <section className='bg actions-page'>
                 <img src={tier} alt="tier rotation" className="tier"/>     
@@ -12,10 +15,10 @@ function Actions() {
                        <div className='row actions-container p-4'> 
                        <h5 className='text-white py-1 text-center'> Choose Which Action to Perform</h5>
                         <div className='col-6'>
-                            <button className="btn action-btn my-2 w-100 ">Set Manager</button>
+                            <button onClick={()=> handleRouting('/set-data')}  className="btn action-btn my-2 w-100 ">Set Manager</button>
                         </div>
                         <div className='col-6'>
-                            <button className="btn action-btn my-2 w-100 ">Get Manager</button>
+                            <button onClick={()=> handleRouting('/get-data')}  className="btn action-btn my-2 w-100 ">Get Manager</button>
                         </div>
                         {/* <div className='col-3'>
                             <button className="btn action-btn my-2 w-100 ">Login</button>
